@@ -1,0 +1,263 @@
+/* @override http://wordpress.pro/content/themes/aurer_v2/css/homepage2.css */
+
+body{
+	background:#0B424C;
+}
+html, body, #first{
+	background: url(../gfx/tile.png) fixed #f7f7f7;
+}
+#page{
+	width:100%;
+	max-width: 100%;
+	text-align:center;
+}
+#first, #second, #third{
+	overflow: hidden;
+}
+#second{
+	-webkit-box-shadow: inset 0 0 20px rgba(0,0,0,0.4);
+	-moz-box-shadow: inset 0 0 20px rgba(0,0,0,0.4);
+	box-shadow: inset 0 0 20px rgba(0,0,0,0.4);
+	color: #fff;
+	background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAKElEQVQIW2NkYGD4r6yszHD37l0GEM0IJP7DOEBJBkasKkAyIABSCQBZdRE8PufQzgAAAABJRU5ErkJggg==);
+	padding: 1em 0;
+}
+#third{
+	height: 384px;
+}
+nav{
+	margin-bottom: 2em;
+}
+nav ul{
+	margin: 0 auto;
+	padding: 10px 0px 8px;
+	background: rgba(0,0,0,0.7);
+	display: inline-block;
+	border-radius: 4px;
+	-webkit-box-shadow: inset 0 0 20px rgba(0,0,0,0.4);
+	-moz-box-shadow: inset 0 0 20px rgba(0,0,0,0.4);
+	box-shadow: inset 0 0 20px rgba(0,0,0,0.4);
+}
+nav li{
+	display: inline;
+	padding: 0;
+	color: #fff;
+}
+nav li a,
+nav li a:visited{
+	text-decoration: none;
+	font-family: "Merriweather", sans-serif;
+	font-size: 1.15em;
+	color: #fff;
+	padding: .5em 20px;
+}
+nav li a:hover,
+nav li.current_page_item a{
+	color: #EE2A66;
+}
+nav .sub-menu{ display: none; }
+h2{
+	color: #444;
+	font-size: 1.5em;
+	margin: 1.5em 0;
+}
+.section{
+  width: 17%;
+  padding: 0 4%;
+  float: left;
+	text-align: left;
+}
+.section h2{
+  margin: 0 0 .5em;
+  font-size: 1.3em;
+  color: #fff;
+}
+.section ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.section li{
+  padding: .5em 0;
+}
+.section a{
+  color: #06A5AE;
+  text-decoration: none;
+  display: block;
+  font-size: .9em;
+}
+.section a:hover{
+  color: #fff;
+}
+.section h2 a{
+	color: white;
+	font-size: inherit;
+}
+.section small{
+  color: #888;
+  font-style: italic;
+  font-size: .8em;
+}
+/* Invert widget loading image on homepage */
+.widget{
+	width: auto;
+}
+.section .widget p{
+	overflow: hidden;
+	text-indent: -9999px;
+	background: url(../gfx/spinner-inverted.gif) no-repeat center;
+}
+.widget cite a{
+	color: #888;
+	text-decoration: underline;
+}
+.widget cite a:hover{ color: white; }
+
+#third{
+  width: 92%;
+  padding: 0 4%;
+  margin: 0 auto;
+  text-align: left;
+  font-size: .9em;
+}
+#third .copy{
+  float: left;
+  margin-right: 1em;
+}
+#third .links{
+  float: left;
+  text-align: left;
+}
+#third ul{
+  padding: 0;
+  list-style: none;
+}
+#third li{
+  display: inline;
+  padding: 0 10px;
+  border-left: 1px solid rgba(255,255,255,0.3);
+}
+#third li:first-child{
+  border: none;
+}
+#third a{
+  color: rgba(255, 255, 255, 0.4);
+  text-decoration: none;
+}
+#third a:hover{
+  color: rgba(255, 255, 255, 1);
+}
+
+/* Homepage widgets */
+#second .widget.loading{
+	height: 30px;
+	background: url(../gfx/spinner-inverted.gif) no-repeat 3em center;
+}
+
+
+@media screen and (min-width:980px){
+	html, body{
+		background: #0B424C;
+	}	
+	#first{
+		background: url(../gfx/hand-top.png) no-repeat center bottom;
+	}
+	#third{
+		background: url(../gfx/hand-bottom.png) no-repeat center top;
+	}
+	h1{
+		margin: 1.5em 0;
+	}
+	h2{
+		margin: 2em 0;
+		color: #fff;
+	}
+}
+@media screen and (max-width:980px){
+	html, body{
+		overflow-y: auto;
+	}
+	#page{
+		width: 100%;
+	}
+	#first,
+	#second,
+	#third,
+	#first h1,
+	#first h2{
+		position: static;
+		margin: 0;
+		width: 100%;
+	}
+	
+	#second{ padding: 0; }
+	h1{
+		padding: 10px 0;
+	}
+	h1 a{ display: block; }
+	#first h2{
+		display: block;
+		margin: 1em;
+		width: auto;
+	}
+	nav{
+		padding: .3em 0;
+		background: url(../gfx/stripes.png) #333;
+	}
+	#navigation{ padding: .5em 0; }
+	nav ul{
+		display: inline;
+		background: none;
+		text-align: left;
+	}
+	nav li{
+		border-color: #555;
+	}
+	nav a{
+		font-weight: normal;
+	}
+		
+	h1{ margin: .4em 0; }
+	#main{
+		margin: 0;
+	}
+	.section{
+		width: 40%;
+		border-top: 1px dashed #333;
+	}
+	.section:nth-child(3){
+		clear: both;
+	}
+	.section h2{
+		margin-top: 1em;
+	}
+}
+@media screen and (max-width:560px){
+	
+	#first h2{
+		color:#444;
+	}
+	
+	#third{ height: auto; }
+	
+	#navigation{ padding: 0; }
+
+	nav li{
+		display: block;
+		border-top: 1px dashed #555;
+	}
+	nav li:first-child{
+		border: none;
+	}
+	nav a{
+		display: block;
+		padding:  0 .6em;
+	}
+	nav li a:hover{
+		background: url(gfx/arrow-white.svg) no-repeat 98% center; 
+	}
+	.section{
+		width: 92%;
+		padding-bottom: 1em;
+	}
+}

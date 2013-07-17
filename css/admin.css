@@ -1,0 +1,38 @@
+/* @override http://wordpress.pro/content/themes/aurer/css/admin.css?ver=1 */
+
+span.description{
+	margin-left: 5px;
+}
+div.option-image {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 3px;
+	margin: 10px 0;
+	position: relative;
+	width: 200px;
+}
+
+div.option-image img{
+	display: block;
+	margin: 0;
+	max-width: 100%;
+}
+div.option-image .image-meta{
+	position: absolute;
+	bottom:  0;
+	background: rgba(0,0,0,0.6);
+	color: white;
+	left:0;
+	right:0;
+	padding: 4px;
+	text-align: center;
+	font-weight: bold;
+	opacity: 0;
+	-webkit-transition: opacity .3s;
+	-moz-transition: opacity .3s;
+	-o-transition: opacity .3s;
+	transition: opacity .3s;
+}
+div.option-image:hover .image-meta{
+	opacity: 1;
+}

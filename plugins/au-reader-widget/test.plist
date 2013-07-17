@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>alternative</key>
+	<dict>
+		<key>href</key>
+		<string>http://google.com</string>
+	</dict>
+	<key>author</key>
+	<string>Test Author</string>
+	<key>origin</key>
+	<dict>
+		<key>htmlUrl</key>
+		<string>http://google.com</string>
+		<key>title</key>
+		<string>Origin title</string>
+	</dict>
+	<key>published</key>
+	<string>1029012802</string>
+	<key>title</key>
+	<string>Test Title</string>
+</dict>
+</plist>

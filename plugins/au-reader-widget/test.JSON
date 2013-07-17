@@ -1,0 +1,14 @@
+{
+	"items": {
+			"title": "Test Title",
+			"author": "Test Author",
+			"published": "2012/10/22 22:30",
+			"alternate": {
+				"href": "http://google.com"
+			},
+			"origin": {
+				"title": "Origin title",
+				"htmlUrl": "http://google.com"
+			}
+		}
+}

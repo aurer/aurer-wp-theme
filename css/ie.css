@@ -1,0 +1,36 @@
+#logo a,
+#top h1 a{
+	text-indent: -999px;
+	overflow: hidden;
+	background: url(../gfx/aurer-logo.png) no-repeat center center;
+	display: block;
+	min-height: 88px;
+	min-width: 88px;
+}
+#top h1 a{
+	display: block;
+	width: 88px;
+	height: 88px;
+	margin:0 auto;
+}
+#search{
+	background-image: url(../gfx/search.png);
+}
+#projects .project .detail,
+.wp-caption{
+	border: 1px solid #ccc;
+	border-top-color: #ddd;
+	border-bottom-color: #aaa;
+}
+.post object,
+.post embed,
+.post iframe{
+	width: 650px;
+	height: 325px;
+}
+.post-thumb img{
+	width: auto;
+}
+a.social-link{
+	background-image: url(../gfx/social-logos.png);
+}
