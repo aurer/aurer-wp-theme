@@ -1,4 +1,4 @@
 aurer-wp-theme
 ==============
 
-Wordpress theme for aurer.co.yk
+Wordpress theme for aurer.co.uk
