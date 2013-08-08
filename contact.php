@@ -26,6 +26,8 @@ if($_POST['submit']):
 		$email_sent = mail($to, $subject, $message, $headers);
 		if($email_sent){
 			header('Location: '.get_permalink( $post->ID ).'?sent=true');
+		} else {
+			header('Location: '.get_permalink( $post->ID ).'?sent=false');
 		}
 	endif;
 endif;
