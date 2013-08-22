@@ -153,8 +153,7 @@ class Au_LastFM_Widget extends WP_Widget {
 							image: data["<?php echo $thumbsize ?>"].length ? data["<?php echo $thumbsize ?>"] : "<?php echo get_template_directory_uri().'/gfx/album_default.jpg' ?>",
 						}
 					});
-				},
-				cachePrefix: "<?php echo $thumbsize ?>"
+				}
 			});
 		</script>
 		<?php echo $after_widget;

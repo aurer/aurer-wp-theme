@@ -6,9 +6,6 @@
 		datamap: {}, // Callback allowing remapping of the retrived data
 		template: "#widtemplate", // The script template to use for the items
 		showmore: true, // Display a "show more" link to reveal all available items
-		cacheEnabled: (window.localStorage !== undefined), // Enable or disable the cache
-		cachePrefix: "", // In case you need to refresh the cache based on an option change
-		cacheTimeout: 300 // Seconds before the cache expires
 	};
 
 	function JSWidget(element, options){
@@ -42,65 +39,22 @@
 
 		fetchItems : function(){
 			var jswidget = this;
-			var cached = jswidget.getCachedData();
-			if( cached ){
-				jswidget.items = cached;
-				jswidget.dfd.resolve();
-			}
-			else{
-				$.ajax({
-					url: jswidget.options.source,
-					dataType: "json"
-				})
-				.error(function(){
+			$.ajax({
+				url: jswidget.options.source,
+				dataType: "json"
+			})
+			.error(function(){
+				jswidget.genericError();
+			})
+			.success(function(data){
+				if(!data){
+					console.log(data)
 					jswidget.genericError();
-				})
-				.success(function(data){
-					if(!data){
-						console.log(data)
-						jswidget.genericError();
-					} else {
-						jswidget.items = jswidget.options.datamap(data);
-						jswidget.cacheData(jswidget.items);
-						jswidget.dfd.resolve();
-					}
-				});
-			}
-		},
-
-		// Get data from the cache if it's available and less than x minutes old
-		getCachedData : function(){
-			var now = new Date();
-			var	cache;
-			var	cacheTime;
-
-			if( this.options.cacheEnabled ){
-				if( localStorage.getItem(this.options.cachePrefix + this.options.template) ){
-					cache = $.parseJSON( localStorage.getItem(this.options.cachePrefix + this.options.template) );
-					cacheTime = new Date(cache.date);
-
-					// Is the cache is older than x minutes
-					if( cacheTime < now.setSeconds( now.getSeconds() - this.cacheTimeout ) ){
-						localStorage.removeItem(this.options.cachePrefix + this.options.template);
-						return false;
-					} else {
-						return cache.data;
-					}
-
 				} else {
-					return false;
+					jswidget.items = jswidget.options.datamap(data);
+					jswidget.dfd.resolve();
 				}
-			}
-			else {
-				localStorage.removeItem(this.options.cachePrefix + this.options.template);
-				return false;
-			}
-		},
-
-		cacheData : function(data){
-			if( !this.options.cacheEnabled ) return false;
-			var toCache = { "date" : new Date().getTime(), "data" : data };
-			localStorage.setItem(this.options.cachePrefix + this.options.template, JSON.stringify( toCache ) );
+			});
 		},
 
 		renderItems : function(){

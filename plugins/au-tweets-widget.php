@@ -99,8 +99,7 @@ class Au_Tweets_Widget extends WP_Widget {
 							text: addLinks(data.text)
 						}
 					});
-				},
-				cacheEnabled: false
+				}
 			});
 			function addLinks(string){
         		return string
