@@ -3,7 +3,6 @@
 	<div id="content">
 		<section id="main">
 			<?php if ( have_posts() ) : ?>
-				<?php the_post() ?>
 				<h1><?php single_cat_title(); ?></h1>
 				<?php while ( have_posts() ) : the_post() ?>
 					<article class="post type-<?php echo get_post_type(); ?>">
