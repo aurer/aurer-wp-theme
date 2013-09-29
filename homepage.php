@@ -46,41 +46,7 @@ HTML::enqueue_script("plugins/au-reader-widget/jswidget.js", array("jquery-min")
 			</ul>
 			<a href="/projects/">more</a>
 		</div>
-		<div class="section"  id="section3">
-			<?php/* if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Homepage 1') ) */?>
-			<div id="au-reader">
-				<ul id="reader-widget" class="widget"></ul>
-			</div>
-			<script id="au-reader-template" type="text/x-handlebars-template">
-				<li>
-					<a href="{{link}}" target="_blank">{{title}}</a>
-					<cite><a href="{{source_link}}" target="_blank">{{source_title}}</a></cite>
-				</li>
-			</script>
-			<script type="text/javascript">
-				$("#reader-widget").JSWidget({
-					template: '#au-reader-template',
-					showmore: false,
-					count: 4,
-					title: '<h2><a href="/reading/">Reading</a></h2>',
-					source: "http://www.google.com/reader/public/javascript/user%2F11417045340617763054%2Fstate%2Fcom.google%2Fstarred?callback=?",
-					datamap: function(data){
-						return $.map(data.items, function(data){	
-							return {
-								title 			: data.title,
-								published 		: new Date(data.published),
-								link 			: data.alternate.href,
-								author 			: data.author,
-								source_title 	: data.origin.title,
-								source_link 	: data.origin.htmlUrl
-							}
-						});
-					},
-				});
-			</script>
-		</div>
-		<div class="section" id="section4">
-			<?php/* if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Homepage 2') ) */?>
+		<div class="section" id="section3">
 			<div id="au-lastfm">
 				<ul id="lastfm-widget" class="widget"></ul>
 			</div>

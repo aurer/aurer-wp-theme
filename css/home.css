@@ -20,7 +20,7 @@ html, body, #first{
 	box-shadow: inset 0 0 20px rgba(0,0,0,0.4);
 	color: #fff;
 	background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAKElEQVQIW2NkYGD4r6yszHD37l0GEM0IJP7DOEBJBkasKkAyIABSCQBZdRE8PufQzgAAAABJRU5ErkJggg==);
-	padding: 1em 0;
+	padding: 1em 10%;
 }
 #third{
 	height: 384px;
@@ -62,7 +62,7 @@ h2{
 	margin: 1.5em 0;
 }
 .section{
-  width: 17%;
+  width: 25.3%;
   padding: 0 4%;
   float: left;
 	text-align: left;
@@ -225,8 +225,17 @@ h2{
 		width: 40%;
 		border-top: 1px dashed #333;
 	}
-	.section:nth-child(3){
+	#section3{
 		clear: both;
+		width: 92%;
+		margin: 1em 0;
+	}
+	#section3 ul{
+		width: 100%;
+	}
+	#section3 li{
+		float: left;
+		padding: 2% 4%;
 	}
 	.section h2{
 		margin-top: 1em;
@@ -259,5 +268,9 @@ h2{
 	.section{
 		width: 92%;
 		padding-bottom: 1em;
+	}
+	#section3 li{
+		float: none;
+		padding: 2% 4%;
 	}
 }
