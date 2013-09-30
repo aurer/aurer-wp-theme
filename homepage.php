@@ -63,7 +63,7 @@ HTML::enqueue_script("plugins/au-reader-widget/jswidget.js", array("jquery-min")
 					template: '#au-lastfm-template',
 					showmore: false,
 					count: 4,
-					title: '<h2><a href="/music/">Music</a></h2>',
+					title: '<h2><a href="/music/">Listening to</a></h2>',
 					source: "<?php echo get_template_directory_uri()."/plugins/au-lastfm-widget/fetch.php?source=RecentTracks&user=philmau"; ?>",
 					datamap: function(data){
 						return $.map(data.items, function(data){
