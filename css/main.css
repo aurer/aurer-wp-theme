@@ -1,7 +1,3 @@
-/*
-HTML5 Boilerplate
-Normalize.css
-*/
 @import url(http://fonts.googleapis.com/css?family=Asap);
 
 @import url(http://fonts.googleapis.com/css?family=Merriweather);
@@ -615,7 +611,7 @@ body {
   clear: left;
   margin: 1em 0;
 }
-#footer .footer-widget .widget{
+#footer .footer-widget .widget {
   width: auto;
 }
 #footer .footer-widget ul {
@@ -864,6 +860,9 @@ a.social-link.github {
 a.social-link.codepen {
   background-position: 0 -42px;
 }
+a.social-link.instagram {
+  background-position: 0 -128px;
+}
 /* Contact form */
 #contact-form {
   padding: 2px;
@@ -952,7 +951,6 @@ div.sent {
   border: 1px solid #ddd;
   padding: 10px 20px;
   background: #fff;
-  border-radius: 3px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
