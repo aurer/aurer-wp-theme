@@ -19,7 +19,7 @@
 }
 #quicklookcover{
 	position: fixed;
-	background: rgba(0,0,0,0.9);
+	background: url(../gfx/tile.png) fixed #f7f7f7;
 	top: 0;
 	right: 0;
 	bottom: 0;
